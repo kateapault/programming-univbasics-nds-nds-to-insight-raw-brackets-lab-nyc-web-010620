@@ -14,11 +14,16 @@ def directors_totals(nds)
     
   }
   
-  all_totals = []
   for each in nds do
-    totals << each[:movies][:worldwide_gross]
+    tot = []
+    for movie in each[:movies] do
+      tot << movie[:worldwide_gross]
+    end
+    result[each[:name]] = tot.sum
   end
-  totals.sum
+  
+  result
+  
 end
 
 pp directors_database
