@@ -18,10 +18,12 @@ def directors_totals(nds)
   #
   #
   # Be sure to return the result at the end!
-  
+  totals = []
   for each in nds do
-    []  
+    totals << each[:movies][:worldwide_gross]
   end
+  
+  totals.sum
   
   
   
